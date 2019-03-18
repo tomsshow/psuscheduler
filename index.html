@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PSU Scheduler</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <div id="year">
+        <p>Choose the year</p>
+        <select>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+        </select>
+    </div>
+
+    <div>
+        <p>Choose the first day of Class</p>
+        <input type="date" id="start" name="trip-start">
+    </div>
+    <div>
+        <p>Choose the last day of Class</p>
+        <input type="date" id="end" name="trip-start">
+    </div>
+
+    <div id="days">
+        <p>when does your class meet?</p>
+        <form>
+            <input type="checkbox" name="weekday1" value="Monday">Monday<br>
+            <input type="checkbox" name="weekday2" value="Tuesday">Tuesday<br>
+            <input type="checkbox" name="weekday3" value="Wednesday">Wednesday<br>
+            <input type="checkbox" name="weekday4" value="Thursday">Thursday<br>
+            <input type="checkbox" name="weekday5" value="Friday">Friday<br><br>
+          </form>
+    </div>
+    <div>
+        <button id="submit" type="submit">Create Schedule</button>
+    </div>
+
+    <script src="index.js"></script>
+    <footer>Github Repo: {link} Report problems: {link}</footer>
+</body>
+</html>
