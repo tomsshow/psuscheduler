@@ -9,6 +9,16 @@
 </head>
 
 <body>
+    <div>
+        <p>What semester are you planning?</p>
+        <select>
+                <option id="spring" value="Spring">Spring</option>
+            <option id="fall" value="Fall">Fall</option>
+            <option id="summer" value="Summer">Summer</option>
+        </select>
+    </div>
+
+
     <div id="year">
         <p>Choose the year</p>
         <select>
@@ -19,11 +29,11 @@
 
     <div>
         <p>Choose the first day of Class</p>
-        <input type="date" id="start" name="trip-start">
+        <input type="date" id="start">
     </div>
     <div>
         <p>Choose the last day of Class</p>
-        <input type="date" id="end" name="trip-start">
+        <input type="date" id="end">
     </div>
 
     <div id="days">
@@ -34,7 +44,7 @@
             <input type="checkbox" name="weekday3" value="Wednesday">Wednesday<br>
             <input type="checkbox" name="weekday4" value="Thursday">Thursday<br>
             <input type="checkbox" name="weekday5" value="Friday">Friday<br><br>
-          </form>
+        </form>
     </div>
     <div>
         <button id="submit" type="submit">Create Schedule</button>
@@ -43,4 +53,5 @@
     <script src="index.js"></script>
     <footer>Github Repo: {link} Report problems: {link}</footer>
 </body>
+
 </html>
