@@ -12,18 +12,27 @@ document.getElementById('submit').addEventListener('click', e => {
   //^sample output: {startValue: "2019-03-12", endValue: "2019-03-19"}
   var dates = getDates(new Date(startValue.substring(0, 4), startValue.substring(5, 7)-1, startValue.substring(8, 10)), new Date(endValue.substring(0, 4), endValue.substring(5, 7)-1, endValue.substring(8, 10)));
 
-  var listOfDates = "";
+  var listOfDates = document.createElement("ol");
+listOfDates.style.listStyleType= 'none';
+listOfDates.style.paddingLeft = 0;
+
 
   //for each item in dates array, print the date
   dates.forEach(function (date) {
-    listOfDates = listOfDates + date + "\n";
+    //makes a list item
+    var d = document.createElement("li");
+
+        d.innerHTML = date;
+
+        d.setAttribute('data-dow', date.getDay());
+    
+    listOfDates.appendChild(d);
 
     console.log(date);
-    
-    console.log(scheduledDates);
+    // console.log(date.toString().substring(0,15));
  });
 
-document.getElementById("scheduledDates").innerHTML = listOfDates;
+  document.getElementById("scheduledDates").appendChild(listOfDates);
 })
 
 console.log('memes loaded')
@@ -49,3 +58,4 @@ var getDates = function (startDate, endDate) {
 };
 
 
+// document.querySelectorAll('li[data-dow="5"]'); retrieves dates that are friday
